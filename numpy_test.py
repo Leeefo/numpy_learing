@@ -1,8 +1,13 @@
-from numpy import random, array
+import time
+import numpy as np
+x = np.random.random(100000000)
 
-string = "1 2 3 4 -8 -10"
+# # Case 1
+# start = time.time()
+# sum(x) / len(x)
+# print(time.time() - start)
 
-list1 = string.split(" ")
-list1.reverse()
-a = array(list1, float)
-
+# Case 2
+start = time.time()
+np.mean(x)
+print(time.time() - start)
